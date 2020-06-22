@@ -1,0 +1,159 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url(https://images.pexels.com/photos/3934514/pexels-photo-3934514.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940) no-repeat;
+    background-size: cover;
+    text-align: center;
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    margin-top: 25px;
+    font-size: 3rem;
+    background: linear-gradient(315deg, #f9c1b1 0%, #fb8085 74%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+#text {
+    font-size: 2rem;
+    font-weight: 900;
+    background: linear-gradient(315deg, #0cbaba 0%, #380036 74%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+button {
+    color: black;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.play-pause-stop {
+    display: flex;
+}
+
+.fa-play,
+.fa-pause,
+.fa-stop {
+    margin: 20px;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    width: 300px;
+    margin: auto;
+    position: relative;
+    transform: scale(1);
+}
+
+.gradient-circle {
+    position: absolute;
+    background: conic-gradient( #7F8C8D 0%, #99A3A4 40%, #34495E 40%, #5D6D7E 60%, #CACFD2 60%, #D7DBDD 100%);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    height: 320px;
+    width: 320px;
+    top: -10px;
+    left: -10px;
+    z-index: -2;
+    border-radius: 50%;
+}
+
+.circle {
+    background: url(https://p7.hiclipart.com/preview/470/870/361/cartoon-moon.jpg);
+    background-position: center;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 50%;
+}
+
+.pointer-container {
+    position: absolute;
+    top: -40px;
+    left: 140px;
+    width: 20px;
+    height: 190px;
+    /*animation: rotate 15s linear forwards infinite;*/
+    transform-origin: bottom center;
+}
+
+.pointer {
+    background-color: #ffffff;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    display: block;
+}
+
+.container.grow {
+    animation: grow 3s linear forwards;
+}
+
+.container.shrink {
+    animation: shrink 3s linear forwards;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes grow {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.2);
+    }
+}
+
+@keyframes shrink {
+    from {
+        transform: scale(1.2);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 400px) {
+    .gradient-circle {
+        height: 280px;
+        width: 280px;
+        top: 8px;
+        left: 8px;
+    }
+    .circle {
+        height: 260px;
+        width: 260px;
+        top: 18px;
+        left: 18px;
+    }
+    .pointer-container {
+        top: 0px;
+        left: 100px;
+        height: 140px;
+        margin-left: 40px;
+    }
+}
