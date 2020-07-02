@@ -1,5 +1,5 @@
 <h1> Relaxation App </h1>
-<h4>You can view my website here: <a href ="https://allyzacoleen.github.io/searchandcook.github.io/"> https://allyzacoleen.github.io/relax.github.io/</a></h4>
+<h4>You can view my website here: <a href ="https://allyzacoleen.github.io/relax.github.io/"> https://allyzacoleen.github.io/relax.github.io/</a></h4>
 #relax.github.io
 
 ![relax](https://user-images.githubusercontent.com/64049672/85309982-035b1500-b4e6-11ea-8089-80741fbce2f2.JPG)
